@@ -1,0 +1,100 @@
+\documentclass[nofootinbib,tightenlines,nobibnotes,aps,prl,preprint,groupedaddress]{revtex4-1}
+\input{packages.tex}
+\input{macros.tex}
+\input{style.tex}
+\input{aas_macros.sty}
+
+\begin{document}
+\title{Preliminary results of the S2 redshift analysis within the RAR model}
+
+% repeat the \author .. \affiliation  etc. as needed
+% \email, \thanks, \homepage, \altaffiliation all apply to the current
+% author. Explanatory text should go in the []'s, actual e-mail
+% address or url should go in the {}'s for \email and \homepage.
+% Please use the appropriate macro foreach each type of information
+\author{Andreas Krut}
+\email{andreas.krut@icranet.org}
+\affiliation{ICRANet, Piazza della Repubblica 10, I--65122 Pescara, Italy}
+
+\date{\today}
+
+
+\begin{abstract}
+The recent fly by of the S2 star through its pericenter allowed to verify relativistic effects in the galactic center based on the robust detection of the combined gravitational redshift and relativistic transverse Doppler effect for S2 \citep{2018A&A...615L..15G}. The detection of relativistic corrections for the S2 orbit are yet out of precision due to the large distance ($1400r_{\rm Sch}$) of the pericenter to an assumend BH in the galactic center. \citet{arguelles_novel_2018} has shown that a quantum core, composed of degenerate fermions, provides a feasible alternative for the BH scenario. It is shown here that their semi-degenerate mass distributions of massive fermions are able to reproduce the relativistic redshift corrections.
+\end{abstract}
+
+% insert suggested PACS numbers in braces on next line
+\pacs{}
+
+% insert suggested keywords - APS authors don't need to do this
+%\keywords{}
+
+\maketitle
+
+
+
+\section{introduction}
+The expected redshift $z(r)$ is a combination of the gravitational redshift $z_g(r)$ and the full relativistic Doppler shift $z_D$ \citep{2006ApJ...639L..21Z}, \begin{equation}
+	\label{eqn:redshift}
+	z(r) = z_g(r) + z_D(r)
+\end{equation}
+
+\subsubsection*{Gravitational redshift}
+The gravitational redshift is given by \begin{equation}
+	\label{eqn:gravitational-redshift}
+	z_g(r) = \frac{g_{00}(R)}{g_{00}(r)} - 1
+\end{equation} where $r$ is the position of the emitted photon (emitter or source) and $R$ is the position of the receiver. Here, $R = R_\odot \approx \SI{8}{\kilo\parsec}$ is the distance of the sun to the galactic center. For a spherically symmetric metric with $g_{00}(r) = \e^{\nu(r)}$ \cref{eqn:gravitational-redshift} becomes \begin{equation}
+	z_g(r) = \e^{[\nu(R) - \nu(r)]/2} - 1
+\end{equation} In the special case of a BH the $00$-component of the metric is given by $g_{00}(r) = (1 - r_{\rm Sch}/r)$ with the Schwarzschild radius $r_{\rm Sch} = 2 G M/c^2$, the BH mass $M$, the gravitational constant $G$ and the speed of light $c$. For an emitter close to the galactic center we have $r/R_\odot \ll 1$. The gravitational redshift simplifies then to \begin{equation}
+	\label{eqn:gravitational-redshift:BH:approx}
+	z_g(r) \approx \frac12 \frac{r_{\rm Sch}}{r}
+\end{equation} Further, it is assumed that the emitter is not to close to the central compact object such that its orbit is Keplerian to a good approximation. Following the vis-viva equation yields \begin{equation}
+	\label{eqn:vis-viva}
+	\beta(r)^2 \approx \frac{r_{\rm Sch}}{r} - \frac{r_{\rm Sch}}{2 a}
+\end{equation} with the semi-major axis $a$. Finally, \cref{eqn:gravitational-redshift:BH:approx,eqn:vis-viva} give \begin{equation}
+	z_g(r) \approx \frac{r_{\rm Sch}}{4a} + \frac12 \beta(r)^2
+\end{equation} with the substitution $\beta(r) = v(r)/c$ and $v(r)$ the object's velocity.
+
+\subsubsection*{Full relativistic Doppler shift}
+The full relativistic Doppler shift is given by \begin{equation}
+	\label{eqn:Doppler-shift}
+	z_D(r) = \frac{1 + \beta(r) \cos\vartheta}{\sqrt{1 - \beta(r)^2}} - 1
+\end{equation} where $\vartheta$ is the angle between the velocity vector and the line of sight. Of interest here is only the transverse Doppler shift, given for $\theta=\pi/2$, what is a prediction of Special Relativity. For small velocities $\beta(r) \ll 1$ the transverse Doppler shift $z_{tD}(r)$ becomes \begin{equation}
+	z_{tD} \approx \frac12 \beta(r)^2
+\end{equation}
+
+
+\subsubsection*{Redshift comparison at the S2 pericenter}
+In the following, the combined gravitational redshift and relativistic transverse Doppler effect at the pericenter of the S2 star will be compared with the RAR prediction.
+
+The former redshift based on the S2 orbit parameters is calculated via \begin{equation}
+	\label{eqn:redshift:Kepler}
+	z(r_p) \approx \frac{r_{\rm Sch}}{4a} + \beta(r_p)^2
+\end{equation} where the velocity at the pericenter is given by \begin{equation}
+	v_p^2 = \frac{G M}{a} \frac{1 + e}{1 - e}
+\end{equation} The numerical values of the orbit parameters (e.g. $M$, $a$ and $e$) are provided in \citet[][Table A.1]{2018A&A...615L..15G}. Note that the semi-major axis $a$ is given there only in $mas$. It is therefore convenient to calculate its value via \begin{equation}
+	a^3 = \frac{G M T^2}{4 \pi^2}
+\end{equation} where $T$ is the orbit period. The relative uncertainty of \cref{eqn:redshift:Kepler} is given by \begin{equation}
+	\Delta z(r_p) = \frac{\Delta M}{M} + \frac{\Delta a}{a} + \frac{4 \Delta e}{(1 - e)(3 + e)} \approx \SI{1.1}{\percent}
+\end{equation} while the uncertainty of the pericenter is given by \begin{equation}
+	\Delta r_p = \frac{\Delta a}{a} + \frac{\Delta e}{1 - e} \approx \SI{0.3}{\percent}
+\end{equation}
+
+In the RAR case the redshift is calculated by \cref{eqn:redshift,eqn:gravitational-redshift,eqn:Doppler-shift} with $\vartheta = \pi/2$ in order to take into account only the transverse Doppler shift. In sum \begin{equation}
+	\label{eqn:redshift:RAR}
+	z(r_p) = \frac{1}{\sqrt{1 - \beta(r_p)^2}} + \e^{[\nu(R) - \nu(r_p)]/2} - 2
+\end{equation}
+
+It is important to emphasize that the calculated redshifts, given by \cref{eqn:redshift:Kepler,eqn:redshift:RAR}, consider only the relativistic corrections. Thus, a deviation of the angle $\theta=\pi/2$ would contribute the Newtonian Doppler shift to both redshifts in the same amount. Additionally, it is expected that the Roemer time delay would contribute in the same way.\footnote{To me it is not completely clear yet how to include the effect due to the Roemer time delay. And if it is necessary at all.}
+
+
+\section{Results}
+The inferred redshift corrections at the S2 pericenter from its orbit parameters and the predicted corrections of the RAR model are compared in \cref{fig:redshift}. Note that the considered RAR solutions consider a slightly larger central core mass ($M_c = \SI{4.2E6}{\Msun}$) compared to $M_c \approx \SI{4.1E6}{\Msun}$ as obtained by \citet{2018A&A...615L..15G}. Nevertheless, the results show that mass distributions of the RAR model are able to reproduce the relativistic redshift correction. However, note that for the solution corresponding to the minimal DM particle mass ($mc^2 = \SI{48}{\kilo\eV}$) the redshift prediction shows a little discrepancy with respect to the reference value due to the close proximity of the S2 pericenter to the \textit{semi-surface}\footnote{Is ok to call it a surface?} of the quantum core.
+
+\loadfigure{figures/redshift}
+
+
+\bibliography{biblio}
+
+\end{document}
+

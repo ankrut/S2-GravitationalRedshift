@@ -1,0 +1,44 @@
+\hypersetup{
+	colorlinks,
+	linkcolor={red!50!black},
+	citecolor={magenta},
+	urlcolor={blue!80!black}
+}
+
+% change vector style to bold letter
+\renewcommand{\vec}[1]{\mbox{\boldmath$#1$}}
+
+% make tables less compact
+\renewcommand{\arraystretch}{1.3}
+
+% allow figures more space to cover before forcing into a seperate page
+\renewcommand{\floatpagefraction}{.8}
+
+% for continued figures
+%\DeclareCaptionFormat{cont}{#1 (cont.)#2#3\par}
+
+% define units
+\DeclareSIUnit \c 			{\ensuremath{\mathit{c}}}
+\DeclareSIUnit \parsec 	{pc}
+\DeclareSIUnit \eV 			{eV}
+\DeclareSIUnit \eVcc		{eV\per\c\squared}
+\DeclareSIUnit \Msun 		{M_\odot}
+
+% define authors
+% nice colors are: orange, purple, olive, brown, cyan, magenata red, 
+% not recommended are: black, white, gray, darkgray, blue, lime, yellow, pink
+\definechangesauthor[name={Andreas}, color=orange]{ak}
+\definechangesauthor[name={Carlos}, color=purple]{ca}
+\definechangesauthor[name={Jorge}, color=olive]{jr}
+
+% uncomment for hiding the author markup
+%\setauthormarkup{}
+
+% bibliography
+%\bibliographystyle{elsarticle-num-names}
+
+% change SI range
+\sisetup{
+	range-phrase	= \text{ -- },
+	range-units		= single
+}
